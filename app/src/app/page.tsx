@@ -1,10 +1,16 @@
 import Image from "next/image";
-import { MailContainer } from "./components/MailContainer";
+import { MailContainer } from "./components/MailContainer/MailContainer";
 
 export default function Home() {
   return (
     <main className="flex font-GoBold min-h-screen flex-col items-center bg-neutral-900">
-      <Image alt="Logo do site" src="/logo-bird.png" width={400} height={116} className="mt-[-3rem]" />
+      <Image
+        alt="Logo do site"
+        src="/logo-bird.png"
+        width={400}
+        height={116}
+        className="mt-[-3rem]"
+      />
       <section className="mt-[-4.5rem] flex flex-col w-[550px] text-xl text-center text-gray-50 gap-7">
         <h1 className="text-3xl">
           DESBLOQUEIE SEU POTENCIAL DE VENDAS COM A{" "}
