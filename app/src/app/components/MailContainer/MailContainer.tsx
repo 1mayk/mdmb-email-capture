@@ -16,8 +16,8 @@ export const MailContainer = () => {
     }
     isLoading(true);
     setInterval(() => {
-      // setInputType("submetido-input")
-      setInputType("ja-add-input");
+      setInputType("submetido-input")
+      // setInputType("ja-add-input");
     }, 1500);
   };
 
