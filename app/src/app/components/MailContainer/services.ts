@@ -1,4 +1,5 @@
-const ROUTE = "https://dombico.com/api/email";
+// const ROUTE = "https://dombico.com/api/email";
+const ROUTE = "/api/email";
 
 export const createEmail = async (email: string) => {
   const data = await fetch(ROUTE, {
