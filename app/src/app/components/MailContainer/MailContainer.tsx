@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { createEmail } from "./services";
 import "./mailContainer.css";
 import Image from "next/image";
 
@@ -9,16 +10,19 @@ export const MailContainer = () => {
   const [inputType, setInputType] = useState<string>("confirmar-input");
   const [email, setEmail] = useState<string>("");
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.length < 1) {
+    if (email.length < 5) {
       return;
     }
     isLoading(true);
-    setInterval(() => {
-      setInputType("submetido-input")
-      // setInputType("ja-add-input");
-    }, 1500);
+
+    const data = await createEmail(email);
+
+    if (data) {
+      setInputType("submetido-input");
+      console.log(data);
+    }
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
