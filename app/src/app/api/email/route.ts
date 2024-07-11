@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
   return new NextResponse(arrEmail, {
     status: 200,
     headers: {
-      'Content-Type': 'text/plain',
+      'Content-Type': 'application/json'
     },
   });
 }
