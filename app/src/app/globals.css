@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media screen and (max-width: 565px) {
+    .adjustContainer {
+      /* background-color: red; */
+      gap: 1rem;
+      width: 100%;
+      padding: 0 5rem;
+    }
+
+    .adjustContainer h1 {
+      font-size: 1.5rem;
+    }
+
+    .adjustContainer p {
+      font-size: 1.05rem;
+      padding: 0 1rem;
+    }
+}

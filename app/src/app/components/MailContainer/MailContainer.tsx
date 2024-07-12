@@ -42,7 +42,7 @@ export const MailContainer = () => {
     >
       <input
         type="email"
-        className="text-neutral-900 text-xl p-3 w-[450px] h-[50px] rounded-md"
+        className="text-neutral-900 text-xl p-3 w-[28.125rem] h-[3.125rem] rounded-md adjust-box"
         name="email-input"
         id="email-input"
         placeholder="Email"
@@ -55,7 +55,7 @@ export const MailContainer = () => {
           type="submit"
           name="confirmar-input"
           id="confirmar-input"
-          className="flex items-center justify-center bg-yellow-300 text-violet-900 font-bold text-xl p-3 w-[450px] h-[50px] rounded-md cursor-pointer transition duration-300 ease-in-out hover:bg-purple-400 hover:text-gray-50 active:bg-purple-700"
+          className="flex items-center justify-center bg-yellow-300 text-violet-900 font-bold text-xl p-3 w-[28.125rem] h-[3.125rem] rounded-md cursor-pointer transition duration-300 ease-in-out hover:bg-purple-400 hover:text-gray-50 active:bg-purple-700 adjust-box"
         >
           {loading ? <div className="loader"></div> : "CONFIRMAR"}
         </button>
@@ -64,7 +64,7 @@ export const MailContainer = () => {
       {inputType === "ja-add-input" && (
         <div
           id="ja-add-input"
-          className="flex items-center justify-center bg-yellow-300 text-violet-900 text-xl p-8 w-[450px] h-[150px] rounded-md expand-down"
+          className="flex items-center justify-center bg-yellow-300 text-violet-900 text-xl p-8 w-[28.125rem] h-[9.375rem] rounded-md expand-down"
         >
           <p className="font-semibold">
             Email já adicionado à lista de espera. Em breve te avisaremos sobre
@@ -76,7 +76,7 @@ export const MailContainer = () => {
       {inputType === "submetido-input" && (
         <div
           id="submetido-input"
-          className="bg-purple-700 text-gray-50 text-xl p-5 w-[450px] h-[150px] rounded-md cursor-pointer confirmationBtn expand-down"
+          className="bg-purple-700 text-gray-50 text-xl p-5 w-[28.125rem] h-[9.375rem] rounded-md cursor-pointer confirmationBtn expand-down"
         >
           <span className="flex gap-5 items-center justify-center">
             <Image
@@ -105,7 +105,7 @@ export const MailContainer = () => {
               height={50}
             />
           </span>
-          <p className="font-semibold w-[395px]">
+          <p className="font-semibold w-[24.688rem]">
             Você está a um passo de conhecer talentos incríveis!
           </p>
         </div>

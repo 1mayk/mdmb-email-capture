@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MailContainer } from "./components/MailContainer/MailContainer";
+import './globals.css';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         height={116}
         className="mt-[-3rem]"
       />
-      <section className="mt-[-4.5rem] flex flex-col w-[550px] text-xl text-center text-gray-50 gap-7">
+      <section className="mt-[-4.5rem] flex flex-col w-[34.375rem] text-xl text-center text-gray-50 gap-7 adjustContainer">
         <h1 className="text-3xl">
           DESBLOQUEIE SEU POTENCIAL DE VENDAS COM A{" "}
           <span className="text-yellow-300">MEU DOM, MEU BICO</span>

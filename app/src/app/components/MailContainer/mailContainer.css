@@ -13,16 +13,16 @@
 }
 
 .loader {
-  width: 70px;
-  height: 30px;
+  width: 4.375rem;
+  height: 1.875rem;
   overflow: hidden;
   position: relative;
 }
 .loader:before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius:50%;
   inset:0;
   margin:auto; 
@@ -33,30 +33,30 @@
 .loader:after {
   content: "";
   position: absolute;
-  width:8px;
-  height:14px;
-  bottom:calc(50% - 4px);
+  width:0.5rem;
+  height:0.875rem;
+  bottom:calc(50% - 0.25rem);
   background: #000;
   animation: l10-2 3s infinite;
 }
 @keyframes l10-1 {
  0%,
- 10% {transform:translate(0)     scale(1)  ;box-shadow: 60px 0 ,60px 0}
+ 10% {transform:translate(0)     scale(1)  ;box-shadow: 3.75rem 0 ,3.75rem 0}
  20%,
- 40% {transform:translate(20px)  scale(1)  ;box-shadow: 60px 0 ,60px 0}
- 48% {transform:translate(20px)  scale(1)  ;box-shadow: 8px  0 ,60px 0}
- 50% {transform:translate(20px)  scale(1.5);box-shadow: 0    0 ,60px 0}
- 58% {transform:translate(20px)  scale(1.5);box-shadow: 0    0 ,8px  0}
+ 40% {transform:translate(1.25rem)  scale(1)  ;box-shadow: 3.75rem 0 ,3.75rem 0}
+ 48% {transform:translate(1.25rem)  scale(1)  ;box-shadow: 0.5rem  0 ,3.75rem 0}
+ 50% {transform:translate(1.25rem)  scale(1.5);box-shadow: 0    0 ,3.75rem 0}
+ 58% {transform:translate(1.25rem)  scale(1.5);box-shadow: 0    0 ,0.5rem  0}
  60%,
- 70% {transform:translate(20px)  scale(2)  ;box-shadow: 0    0 ,0    0}
+ 70% {transform:translate(1.25rem)  scale(2)  ;box-shadow: 0    0 ,0    0}
 
- 85% {transform:translate(-50px) scale(2)  ;box-shadow: 0    0 ,0    0}
- 87% {transform:translate(-50px) scale(1)  ;box-shadow: 0    0 ,0    0}
+ 85% {transform:translate(-3.125rem) scale(2)  ;box-shadow: 0    0 ,0    0}
+ 87% {transform:translate(-3.125rem) scale(1)  ;box-shadow: 0    0 ,0    0}
  100%{transform:translate(0)     scale(1)  ;box-shadow: 0    0 ,0    0}
 }
 @keyframes l10-2 {
  20%,70% {left:50%}
- 0%,10%,85%,100% {left:-25px}
+ 0%,10%,85%,100% {left:-1.563rem}
 }
 
 @keyframes expandDown {
@@ -65,8 +65,14 @@
     opacity: 0;
   }
   to {
-    max-height: 150px; /* Ajuste conforme necessário */
+    max-height: 9.375rem; /* Ajuste conforme necessário */
     opacity: 1;
   }
 }
-
+@media screen and (max-width: 565px) {
+  .adjust-box {
+    /* background-color: green; */
+    width: 20.125rem;
+    height: 2.75rem;
+  }
+}
