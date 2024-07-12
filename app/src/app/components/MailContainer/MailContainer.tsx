@@ -17,13 +17,17 @@ export const MailContainer = () => {
     }
     isLoading(true);
 
-    const data = await createEmail({
-      description: email,
-    });
+    try {
+      const data = await createEmail({
+        description: email,
+      });
 
-    if (data) {
-      setInputType("submetido-input");
-      console.log(data);
+      if (data) {
+        setInputType("submetido-input");
+        console.log(data);
+      }
+    } catch {
+      setInputType("ja-add-input");
     }
   };
 
