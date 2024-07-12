@@ -1,16 +1,22 @@
+import axios from "axios";
+
+export interface IEmailCapture {
+  id?: number;
+  description?: string;
+}
+
 // const ROUTE = "https://dombico.com/api/email";
-const ROUTE = "/api/email";
+const ROUTE = "'https://click-help.onrender.com/emailCapture/createEmail'";
 
-export const createEmail = async (email: string) => {
-  const data = await fetch(ROUTE, {
-    method: "POST",
+export const createEmail = async (payload: IEmailCapture) => {
+  const config = {
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email }),
-  });
+  };
+  const response = await axios.post(ROUTE, payload, config);
 
-  return data;
+  return response.data;
 };
 
 export const getEmails = async () => {

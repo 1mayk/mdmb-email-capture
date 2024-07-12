@@ -17,7 +17,9 @@ export const MailContainer = () => {
     }
     isLoading(true);
 
-    const data = await createEmail(email);
+    const data = await createEmail({
+      description: email,
+    });
 
     if (data) {
       setInputType("submetido-input");
