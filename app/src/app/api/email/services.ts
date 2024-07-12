@@ -34,7 +34,8 @@ export function storeEmail(email: string): void | string {
 export function readEmails(): string {
     try {
         if (!fs.existsSync(filePath)) {
-            return JSON.stringify([], null, 2); // Retornar um array vazio se o arquivo não existir
+            // return JSON.stringify([], null, 2); // Retornar um array vazio se o arquivo não existir
+            console.log("deu ruim")
         }
 
         const data = fs.readFileSync(filePath, 'utf8');
