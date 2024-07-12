@@ -6,7 +6,7 @@ export interface IEmailCapture {
 }
 
 // const ROUTE = "https://dombico.com/api/email";
-const ROUTE = "'https://click-help.onrender.com/emailCapture/createEmail'";
+const ROUTE = "https://click-help.onrender.com/emailCapture/createEmail";
 
 export const createEmail = async (payload: IEmailCapture) => {
   const config = {
