@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const filePath = path.join(__dirname, 'emails.json');
+const filePath = path.join(__dirname, '..', '..', '..', 'public', 'emails.json');
 
 // Função para armazenar um email em um documento JSON
 export function storeEmail(email: string): void | string {
